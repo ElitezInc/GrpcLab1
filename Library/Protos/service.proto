@@ -8,17 +8,13 @@ service Service {
 	rpc ShouldAdd (WaterRequest) returns (WaterAddResponse);
 	rpc ShouldRemove (WaterRequest) returns (WaterRemoveResponse);
 	
-	rpc Add (WaterAddRequest) returns (WaterLevelResponse);
-	rpc Remove (WaterRemoveRequest) returns (WaterLevelResponse);
+	rpc Add (WaterAmountRequest) returns (WaterLevelResponse);
+	rpc Remove (WaterAmountRequest) returns (WaterLevelResponse);
 }
 
 message WaterRequest { }
 
-message WaterAddRequest {
-	double amount = 1;
-}
-
-message WaterRemoveRequest {
+message WaterAmountRequest {
 	double amount = 1;
 }
 

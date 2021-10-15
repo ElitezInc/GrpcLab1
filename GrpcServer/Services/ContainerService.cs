@@ -30,13 +30,13 @@ namespace GrpcServer
         }
 
         public override Task<WaterLevelResponse> Add(
-            WaterAddRequest request, 
+            WaterAmountRequest request, 
             ServerCallContext context
             )
         {
             Program.container.waterLevel += request.Amount;
 
-            Console.WriteLine($"Added {request.Amount} amount of water, now water level is:  {Program.container.waterLevel}");
+            Console.WriteLine($"Added {request.Amount}L amount of water, now water level is:  {Math.Round(Program.container.waterLevel, 1)}L");
 
             return Task.FromResult(new WaterLevelResponse
             {
@@ -45,13 +45,13 @@ namespace GrpcServer
         }
 
         public override Task<WaterLevelResponse> Remove(
-            WaterRemoveRequest request, 
+            WaterAmountRequest request, 
             ServerCallContext context
             )
         {
             Program.container.waterLevel -= request.Amount;
 
-            Console.WriteLine($"Removed {request.Amount} amount of water, now water level is:  {Program.container.waterLevel}");
+            Console.WriteLine($"Removed {request.Amount}L amount of water, now water level is:  {Math.Round(Program.container.waterLevel, 1)}L");
 
             return Task.FromResult(new WaterLevelResponse
             {

@@ -7,3 +7,12 @@ C:\Users\Elitez\Desktop\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.csproj
 C:\Users\Elitez\Desktop\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.dll
 C:\Users\Elitez\Desktop\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.pdb
 C:\Users\Elitez\Desktop\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.csproj.AssemblyReference.cache
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.dll
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.pdb
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\bin\Debug\netstandard2.0\Library.deps.json
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\bin\Debug\netstandard2.0\Library.dll
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\bin\Debug\netstandard2.0\Library.pdb
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.AssemblyInfoInputs.cache
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.AssemblyInfo.cs
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.csproj.CoreCompileInputs.cache
+C:\Users\Elitez\Desktop\Files\GrpcLab1\Library\obj\Debug\netstandard2.0\Library.csproj.AssemblyReference.cache

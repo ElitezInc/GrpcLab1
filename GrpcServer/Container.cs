@@ -17,9 +17,9 @@ namespace GrpcServer
 
         public Container()
         {
-            waterLevel = new Random().NextDouble() * 100.0;
+            waterLevel = Math.Round(new Random().NextDouble() * 100.0, 1);
 
-            Console.WriteLine($"Set current water level to: {waterLevel}");
+            Console.WriteLine($"Set current water level to: {waterLevel}L");
 
             run();
         }
@@ -32,11 +32,11 @@ namespace GrpcServer
                 {
                     lock(accessLock)
                     {
-                        lowerLevel = new Random().NextDouble() * 10.0;
-                        upperLevel = lowerLevel + new Random().NextDouble() * 30.0;
+                        lowerLevel = Math.Round(new Random().NextDouble() * 100.0, 1);
+                        upperLevel = Math.Round(lowerLevel + new Random().NextDouble() * 30.0, 1);
                     }
                     
-                    Console.WriteLine($"Set water level range to: {lowerLevel} - {upperLevel}");
+                    Console.WriteLine($"Set water level range to: {lowerLevel}L - {upperLevel}L");
 
                     Thread.Sleep(8000);
                 }

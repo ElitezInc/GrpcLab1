@@ -25,23 +25,22 @@ namespace Library {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRQcm90b3Mvc2VydmljZS5wcm90bxIHc2VydmljZSIOCgxXYXRlclJlcXVl",
-            "c3QiIQoPV2F0ZXJBZGRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEoASIkChJXYXRl",
-            "clJlbW92ZVJlcXVlc3QSDgoGYW1vdW50GAEgASgBIiUKEFdhdGVyQWRkUmVz",
-            "cG9uc2USEQoJc2hvdWxkQWRkGAEgASgIIisKE1dhdGVyUmVtb3ZlUmVzcG9u",
-            "c2USFAoMc2hvdWxkUmVtb3ZlGAEgASgIIigKEldhdGVyTGV2ZWxSZXNwb25z",
-            "ZRISCgp3YXRlckxldmVsGAEgASgBMo8CCgdTZXJ2aWNlEj0KCVNob3VsZEFk",
-            "ZBIVLnNlcnZpY2UuV2F0ZXJSZXF1ZXN0Ghkuc2VydmljZS5XYXRlckFkZFJl",
-            "c3BvbnNlEkMKDFNob3VsZFJlbW92ZRIVLnNlcnZpY2UuV2F0ZXJSZXF1ZXN0",
-            "Ghwuc2VydmljZS5XYXRlclJlbW92ZVJlc3BvbnNlEjwKA0FkZBIYLnNlcnZp",
-            "Y2UuV2F0ZXJBZGRSZXF1ZXN0Ghsuc2VydmljZS5XYXRlckxldmVsUmVzcG9u",
-            "c2USQgoGUmVtb3ZlEhsuc2VydmljZS5XYXRlclJlbW92ZVJlcXVlc3QaGy5z",
-            "ZXJ2aWNlLldhdGVyTGV2ZWxSZXNwb25zZUIKqgIHTGlicmFyeWIGcHJvdG8z"));
+            "c3QiJAoSV2F0ZXJBbW91bnRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEoASIlChBX",
+            "YXRlckFkZFJlc3BvbnNlEhEKCXNob3VsZEFkZBgBIAEoCCIrChNXYXRlclJl",
+            "bW92ZVJlc3BvbnNlEhQKDHNob3VsZFJlbW92ZRgBIAEoCCIoChJXYXRlckxl",
+            "dmVsUmVzcG9uc2USEgoKd2F0ZXJMZXZlbBgBIAEoATKSAgoHU2VydmljZRI9",
+            "CglTaG91bGRBZGQSFS5zZXJ2aWNlLldhdGVyUmVxdWVzdBoZLnNlcnZpY2Uu",
+            "V2F0ZXJBZGRSZXNwb25zZRJDCgxTaG91bGRSZW1vdmUSFS5zZXJ2aWNlLldh",
+            "dGVyUmVxdWVzdBocLnNlcnZpY2UuV2F0ZXJSZW1vdmVSZXNwb25zZRI/CgNB",
+            "ZGQSGy5zZXJ2aWNlLldhdGVyQW1vdW50UmVxdWVzdBobLnNlcnZpY2UuV2F0",
+            "ZXJMZXZlbFJlc3BvbnNlEkIKBlJlbW92ZRIbLnNlcnZpY2UuV2F0ZXJBbW91",
+            "bnRSZXF1ZXN0Ghsuc2VydmljZS5XYXRlckxldmVsUmVzcG9uc2VCCqoCB0xp",
+            "YnJhcnliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterRequest), global::Library.WaterRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterAddRequest), global::Library.WaterAddRequest.Parser, new[]{ "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterRemoveRequest), global::Library.WaterRemoveRequest.Parser, new[]{ "Amount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterAmountRequest), global::Library.WaterAmountRequest.Parser, new[]{ "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterAddResponse), global::Library.WaterAddResponse.Parser, new[]{ "ShouldAdd" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterRemoveResponse), global::Library.WaterRemoveResponse.Parser, new[]{ "ShouldRemove" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Library.WaterLevelResponse), global::Library.WaterLevelResponse.Parser, new[]{ "WaterLevel" }, null, null, null, null)
@@ -203,16 +202,16 @@ namespace Library {
 
   }
 
-  public sealed partial class WaterAddRequest : pb::IMessage<WaterAddRequest>
+  public sealed partial class WaterAmountRequest : pb::IMessage<WaterAmountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<WaterAddRequest> _parser = new pb::MessageParser<WaterAddRequest>(() => new WaterAddRequest());
+    private static readonly pb::MessageParser<WaterAmountRequest> _parser = new pb::MessageParser<WaterAmountRequest>(() => new WaterAmountRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<WaterAddRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<WaterAmountRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -228,7 +227,7 @@ namespace Library {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WaterAddRequest() {
+    public WaterAmountRequest() {
       OnConstruction();
     }
 
@@ -236,15 +235,15 @@ namespace Library {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WaterAddRequest(WaterAddRequest other) : this() {
+    public WaterAmountRequest(WaterAmountRequest other) : this() {
       amount_ = other.amount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WaterAddRequest Clone() {
-      return new WaterAddRequest(this);
+    public WaterAmountRequest Clone() {
+      return new WaterAmountRequest(this);
     }
 
     /// <summary>Field number for the "amount" field.</summary>
@@ -262,12 +261,12 @@ namespace Library {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as WaterAddRequest);
+      return Equals(other as WaterAmountRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(WaterAddRequest other) {
+    public bool Equals(WaterAmountRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -340,196 +339,7 @@ namespace Library {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(WaterAddRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Amount != 0D) {
-        Amount = other.Amount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 9: {
-            Amount = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 9: {
-            Amount = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class WaterRemoveRequest : pb::IMessage<WaterRemoveRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<WaterRemoveRequest> _parser = new pb::MessageParser<WaterRemoveRequest>(() => new WaterRemoveRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<WaterRemoveRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WaterRemoveRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WaterRemoveRequest(WaterRemoveRequest other) : this() {
-      amount_ = other.amount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WaterRemoveRequest Clone() {
-      return new WaterRemoveRequest(this);
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 1;
-    private double amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as WaterRemoveRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(WaterRemoveRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Amount != 0D) {
-        output.WriteRawTag(9);
-        output.WriteDouble(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Amount != 0D) {
-        output.WriteRawTag(9);
-        output.WriteDouble(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Amount != 0D) {
-        size += 1 + 8;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(WaterRemoveRequest other) {
+    public void MergeFrom(WaterAmountRequest other) {
       if (other == null) {
         return;
       }
@@ -595,7 +405,7 @@ namespace Library {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -784,7 +594,7 @@ namespace Library {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -973,7 +783,7 @@ namespace Library {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Library.ServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

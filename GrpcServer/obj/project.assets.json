@@ -677,11 +677,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elitez\\Desktop\\GrpcLab1\\GrpcServer\\GrpcServer.csproj",
+      "projectUniqueName": "C:\\Users\\Elitez\\Desktop\\Files\\GrpcLab1\\GrpcServer\\GrpcServer.csproj",
       "projectName": "GrpcServer",
-      "projectPath": "C:\\Users\\Elitez\\Desktop\\GrpcLab1\\GrpcServer\\GrpcServer.csproj",
+      "projectPath": "C:\\Users\\Elitez\\Desktop\\Files\\GrpcLab1\\GrpcServer\\GrpcServer.csproj",
       "packagesPath": "C:\\Users\\Elitez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elitez\\Desktop\\GrpcLab1\\GrpcServer\\obj\\",
+      "outputPath": "C:\\Users\\Elitez\\Desktop\\Files\\GrpcLab1\\GrpcServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -702,8 +702,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Elitez\\Desktop\\GrpcLab1\\Library\\Library.csproj": {
-              "projectPath": "C:\\Users\\Elitez\\Desktop\\GrpcLab1\\Library\\Library.csproj"
+            "C:\\Users\\Elitez\\Desktop\\Files\\GrpcLab1\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\Elitez\\Desktop\\Files\\GrpcLab1\\Library\\Library.csproj"
             }
           }
         }

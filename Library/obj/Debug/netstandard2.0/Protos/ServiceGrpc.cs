@@ -52,11 +52,9 @@ namespace Library {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Library.WaterRemoveResponse> __Marshaller_service_WaterRemoveResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Library.WaterRemoveResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Library.WaterAddRequest> __Marshaller_service_WaterAddRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Library.WaterAddRequest.Parser));
+    static readonly grpc::Marshaller<global::Library.WaterAmountRequest> __Marshaller_service_WaterAmountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Library.WaterAmountRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Library.WaterLevelResponse> __Marshaller_service_WaterLevelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Library.WaterLevelResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Library.WaterRemoveRequest> __Marshaller_service_WaterRemoveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Library.WaterRemoveRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Library.WaterRequest, global::Library.WaterAddResponse> __Method_ShouldAdd = new grpc::Method<global::Library.WaterRequest, global::Library.WaterAddResponse>(
@@ -75,19 +73,19 @@ namespace Library {
         __Marshaller_service_WaterRemoveResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Library.WaterAddRequest, global::Library.WaterLevelResponse> __Method_Add = new grpc::Method<global::Library.WaterAddRequest, global::Library.WaterLevelResponse>(
+    static readonly grpc::Method<global::Library.WaterAmountRequest, global::Library.WaterLevelResponse> __Method_Add = new grpc::Method<global::Library.WaterAmountRequest, global::Library.WaterLevelResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Add",
-        __Marshaller_service_WaterAddRequest,
+        __Marshaller_service_WaterAmountRequest,
         __Marshaller_service_WaterLevelResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Library.WaterRemoveRequest, global::Library.WaterLevelResponse> __Method_Remove = new grpc::Method<global::Library.WaterRemoveRequest, global::Library.WaterLevelResponse>(
+    static readonly grpc::Method<global::Library.WaterAmountRequest, global::Library.WaterLevelResponse> __Method_Remove = new grpc::Method<global::Library.WaterAmountRequest, global::Library.WaterLevelResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Remove",
-        __Marshaller_service_WaterRemoveRequest,
+        __Marshaller_service_WaterAmountRequest,
         __Marshaller_service_WaterLevelResponse);
 
     /// <summary>Service descriptor</summary>
@@ -113,13 +111,13 @@ namespace Library {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Library.WaterLevelResponse> Add(global::Library.WaterAddRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Library.WaterLevelResponse> Add(global::Library.WaterAmountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Library.WaterLevelResponse> Remove(global::Library.WaterRemoveRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Library.WaterLevelResponse> Remove(global::Library.WaterAmountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -194,42 +192,42 @@ namespace Library {
         return CallInvoker.AsyncUnaryCall(__Method_ShouldRemove, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Library.WaterLevelResponse Add(global::Library.WaterAddRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Library.WaterLevelResponse Add(global::Library.WaterAmountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Add(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Library.WaterLevelResponse Add(global::Library.WaterAddRequest request, grpc::CallOptions options)
+      public virtual global::Library.WaterLevelResponse Add(global::Library.WaterAmountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> AddAsync(global::Library.WaterAddRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> AddAsync(global::Library.WaterAmountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> AddAsync(global::Library.WaterAddRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> AddAsync(global::Library.WaterAmountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Add, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Library.WaterLevelResponse Remove(global::Library.WaterRemoveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Library.WaterLevelResponse Remove(global::Library.WaterAmountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Remove(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Library.WaterLevelResponse Remove(global::Library.WaterRemoveRequest request, grpc::CallOptions options)
+      public virtual global::Library.WaterLevelResponse Remove(global::Library.WaterAmountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Remove, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> RemoveAsync(global::Library.WaterRemoveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> RemoveAsync(global::Library.WaterAmountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> RemoveAsync(global::Library.WaterRemoveRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Library.WaterLevelResponse> RemoveAsync(global::Library.WaterAmountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Remove, null, options, request);
       }
@@ -262,8 +260,8 @@ namespace Library {
     {
       serviceBinder.AddMethod(__Method_ShouldAdd, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.WaterRequest, global::Library.WaterAddResponse>(serviceImpl.ShouldAdd));
       serviceBinder.AddMethod(__Method_ShouldRemove, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.WaterRequest, global::Library.WaterRemoveResponse>(serviceImpl.ShouldRemove));
-      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.WaterAddRequest, global::Library.WaterLevelResponse>(serviceImpl.Add));
-      serviceBinder.AddMethod(__Method_Remove, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.WaterRemoveRequest, global::Library.WaterLevelResponse>(serviceImpl.Remove));
+      serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.WaterAmountRequest, global::Library.WaterLevelResponse>(serviceImpl.Add));
+      serviceBinder.AddMethod(__Method_Remove, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Library.WaterAmountRequest, global::Library.WaterLevelResponse>(serviceImpl.Remove));
     }
 
   }
