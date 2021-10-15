@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "Library";
+
+package service;
+
+service Service {
+	rpc ShouldAdd (WaterRequest) returns (WaterAddResponse);
+	rpc ShouldRemove (WaterRequest) returns (WaterRemoveResponse);
+	
+	rpc Add (WaterAddRequest) returns (WaterLevelResponse);
+	rpc Remove (WaterRemoveRequest) returns (WaterLevelResponse);
+}
+
+message WaterRequest { }
+
+message WaterAddRequest {
+	double amount = 1;
+}
+
+message WaterRemoveRequest {
+	double amount = 1;
+}
+
+message WaterAddResponse {
+	bool shouldAdd = 1;
+}
+
+message WaterRemoveResponse {
+	bool shouldRemove = 1;
+}
+
+message WaterLevelResponse {
+	double waterLevel = 1;
+}
