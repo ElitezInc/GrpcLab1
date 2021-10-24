@@ -36,14 +36,24 @@ namespace Client
                 {
                     bool shouldAdd = client.ShouldAddAsync(new WaterRequest()).ResponseAsync.Result.ShouldAdd;
 
-                    Dispatcher.Invoke(new Action(() => tbAdder.Text += "Should add response : " + shouldAdd + "\n"));
+                    Dispatcher.Invoke(new Action(() =>
+                    {
+                        tbAdder.Text += "Should add response : " + shouldAdd + "\n";
+                        tbAdder.CaretIndex = tbAdder.Text.Length;
+                        tbAdder.ScrollToEnd();
+                    }));
 
                     if (shouldAdd)
                     {
                         double amount = Math.Round(new Random().NextDouble() * 5.0, 1);
                         var addResponse = client.AddAsync(new WaterAmountRequest { Amount = amount });
 
-                        Dispatcher.Invoke(new Action(() => tbAdder.Text += $"Added {amount}L of water, now capacity is {addResponse.ResponseAsync.Result.WaterLevel}L\n"));
+                        Dispatcher.Invoke(new Action(() =>
+                        {
+                            tbAdder.Text += $"Added {amount}L of water, now capacity is {addResponse.ResponseAsync.Result.WaterLevel}L\n";
+                            tbAdder.CaretIndex = tbAdder.Text.Length;
+                            tbAdder.ScrollToEnd();
+                        }));
                     }
 
                     Thread.Sleep(1000);
@@ -57,14 +67,24 @@ namespace Client
                 {
                     bool shouldRemove = client.ShouldRemoveAsync(new WaterRequest()).ResponseAsync.Result.ShouldRemove;
 
-                    Dispatcher.Invoke(new Action(() => tbRemover.Text += "Should remove response : " + shouldRemove + "\n"));
+                    Dispatcher.Invoke(new Action(() =>
+                    {
+                        tbRemover.Text += "Should remove response : " + shouldRemove + "\n";
+                        tbRemover.CaretIndex = tbRemover.Text.Length;
+                        tbRemover.ScrollToEnd();
+                    }));
 
                     if (shouldRemove)
                     {
                         double amount = Math.Round(new Random().NextDouble() * 5.0, 1);
                         var removeResponse = client.RemoveAsync(new WaterAmountRequest { Amount = amount });
 
-                        Dispatcher.Invoke(new Action(() => tbRemover.Text += $"Removed {amount}L of water, now capacity is {removeResponse.ResponseAsync.Result.WaterLevel}L\n"));
+                        Dispatcher.Invoke(new Action(() =>
+                        {
+                            tbRemover.Text += $"Removed {amount}L of water, now capacity is {removeResponse.ResponseAsync.Result.WaterLevel}L\n";
+                            tbRemover.CaretIndex = tbRemover.Text.Length;
+                            tbRemover.ScrollToEnd();
+                        }));
                     }
 
                     Thread.Sleep(1000);
